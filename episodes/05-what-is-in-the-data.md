@@ -15,13 +15,13 @@ exercises: 5
 ::::::
 
 In the following, we will learn about CMS data in the NANOAOD format. This is the data format
-that can be accessed without CMS-specific software using ROOT or python tools.
+that can be accessed without CMS-specific software using python tools.
 
 
 ## NANOAOD variable list
 
 Each NANOAOD dataset has the variable list with a brief description attached to the portal record. You will learn more about the
-variables for different types of physics objects in the [Physics Objects lesson](https://cms-opendata-workshop.github.io/workshop2024-lesson-physics-objects/instructor/index.html)
+variables for different types of physics objects in the [Physics Objects lesson](https://cms-opendata-workshop.github.io/workshop2026-lesson-physics-objects/instructor/index.html)
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -40,50 +40,15 @@ The variables of reconstructed objects, such as Muons, are the same for [data](h
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
-## Inspect datasets with ROOT
-
-This part of the lesson will be done from within the [ROOT tools container](https://cms-opendata-workshop.github.io/workshopqcd-2024-lesson-docker/03-docker-for-cms-opendata.html#root-tools-container). You should have it available, start it with:
-
-```bash
-docker start -i my_root
-```
-
-All ROOT commands will be typed inside that environment.
-
-If you are using VNC for the graphics, remember to start it before starting ROOT in the container prompt:
-
-```bash
-start_vnc
-```
-
-Work through the quick introduction to getting started with CMS NANOAOD Open Data in [the getting started guide page](https://opendata.cern.ch/docs/cms-getting-started-nanoaod) on the CERN Open Data portal.
-
-:::::: checklist
-
-### You will learn:
-
-- [x] how to print out the event content of a NANOAOD file in ROOT
-- [x] how to plot a variable in the NANOAOD file with some selections in ROOT
-
-::::::::::::
-
-
 ## Inspect datasets with python tools
 
-This part of the lesson will be done from within the [python tools container](https://cms-opendata-workshop.github.io/workshopqcd-2024-lesson-docker/03-docker-for-cms-opendata.html#python-tools-container). You should have it available, start it with:
+This part of the lesson uses your local Python environment. Make sure you have the required packages installed (see the [Setup](../learners/setup.md) page). Start Jupyter Lab with:
 
 ```bash
-docker start -i my_python
+jupyter-lab
 ```
 
-Start the jupyter lab with
-
-```bash
-jupyter-lab --ip=0.0.0.0 --no-browser
-```
-
-Open a new jupyter notebook from the jupyter lab tab that the container will open in your browser. 
-Type the commands in code cells of the notebook.
+Open a new notebook and type the commands in code cells.
 
 First, import some python libraries:
 
@@ -213,14 +178,6 @@ This is what you will see:
 ![](fig/python_pt_plot_cms_2016_singlemuon_nanoaod.png)
 
 If you've chosen another dataset or another file, it will look different.
-
-:::::::::::::::::::::::::: challenge
-
-## Homework: complete the homework form!
-
-Please visit the [assignment form](https://docs.google.com/forms/d/e/1FAIpQLSdxsc-aIWqUyFA0qTsnbfQrA6wROtAxC5Id4sxH08STTl8e5w/viewform) and answer some questions about navigating the Open Data Portal to find Open Data. You need to sign in and <strong style="color: red;">click on the submit button</strong> in order to save your work.  You can go back to edit the form at any time.
-
-::::::::::::::::::::::::::::::::
 
 :::::: keypoints
 - It's useful to inspect the files before diving into the full analysis.

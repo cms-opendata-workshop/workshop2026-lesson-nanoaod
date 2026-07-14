@@ -2,6 +2,31 @@
 title: Setup
 ---
 
-First episodes of this lesson can be worked through in a web browser.
-Episodes 4 and 5 use Docker containers to inspect and download open data files and their metadata, and it will require using a Unix terminal (Linux, MacOS terminal, or Windows WSL2 Ubuntu terminal) with [Docker installed](https://cms-opendata-workshop.github.io/workshop2024-lesson-docker/).
+The first episodes of this lesson can be worked through in a web browser.
+
+Episodes 4, 5, and 6 require a Python environment. This can be on a terminal on your
+local machine or on a server. Alternatively, you can run Python in a jupyter notebook. In 
+this case, the Python commands will remain the same, but for shell commands marked as *BASH*
+you will have to add a `!` to the beginning of the command, as demonstrated below.
+
+
+Install the following packages with `pip`:
+
+```bash
+pip install cernopendata-client uproot awkward numpy matplotlib jupyterlab
+```
+
+If in the jupyter notebook:
+
+```bash
+!pip install cernopendata-client uproot awkward numpy matplotlib jupyterlab
+```
+
+You will also need XRootD support to stream files directly from the CERN Open Data storage. Install it with:
+
+```bash
+pip install xrootd
+```
+
+A Unix terminal (Linux, macOS terminal, or Windows WSL2 Ubuntu terminal) is required for the command-line steps.
 

@@ -8,23 +8,23 @@ exercises: 0
 :::::: questions
 - What is the point of these exercises?
 - How do I find the data I want to work with?
+- Once I've found the data, what do I do with them?
 
 ::::::::::::::::::::::
 
 :::::: objectives
 - To understand why we start with the Open Data Portal
 - To understand the basics of how the datasets are divided up
+- To understand how to explore the contents of a dataset
 
 ::::::::::::::::::::::
 
 
 :::::: callout
 ## Ready to go?
-The first part of this lesson is done entirely in the browser. 
- 
-Then, [Episode 4: How to access metadata on the command line?](04-cli-through-cernopendata-client.md) requires the use of a command-line tool. It is available as a Docker container or it can be installed with `pip`. Make sure you have completed the [Docker pre-exercise](https://cms-opendata-workshop.github.io/workshop2024-lesson-docker/) and have docker installed.
+The first part of this lesson is done entirely in the browser.
 
-[Episode 5: What is in the data?](05-what-is-in-the-data.md) is done in the root or python tools container. Make sure you have [these containers available](https://cms-opendata-workshop.github.io/workshop2024-lesson-docker/03-docker-for-cms-opendata.html).
+Episodes 4, 5, and 6 require Python packages installed on your machine. See the [Setup](../learners/setup.md) page for instructions.
 
 ::::::
 

@@ -15,7 +15,7 @@ carpentry: 'incubator'
 varnish: 'cms-opendata-workshop/varnish'
 
 # Overall title for pages.
-title: 'Exploring NANOAOD' # FIXME
+title: 'Finding and exploring datasets' # FIXME
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: 2026-09-07 # FIXME
@@ -62,12 +62,13 @@ contact: 'cms-dpoa-coordinator@cern.ch' # FIXME
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
+episodes:
 - 01-introduction.md
 - 02-where-are-the-datasets.md
 - 03-what-data-is-available.md
 - 04-cli-through-cernopendata-client.md
 - 05-what-is-in-the-data.md
+- 06-nanoaod-dataset.md
 
 # Information for Learners
 learners: 

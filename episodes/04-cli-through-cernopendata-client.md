@@ -23,18 +23,16 @@ Each CMS Open Data dataset comes with metadata that describes its contents (size
 
 ## Command-line tool
 
-[cernopendata-client](https://cernopendata-client.readthedocs.io/en/latest/) is a command-line tool to download files or metadata of CERN Open Data portal records. It can be [installed](https://cernopendata-client.readthedocs.io/en/latest/installation.html) with `pip` or used through the container image.
-
-As you already have [Docker]((https://cms-opendata-workshop.github.io/workshopwhepp-lesson-docker)) installed, we use the latter option. Pull the container image with:
+[cernopendata-client](https://cernopendata-client.readthedocs.io/en/latest/) is a command-line tool to download files or metadata of CERN Open Data portal records. Install it with `pip`:
 
 ```bash
-docker pull docker.io/cernopendata/cernopendata-client
+pip install cernopendata-client
 ```
 
 Display the command help with:
 
 ```bash
-docker run -i -t --rm docker.io/cernopendata/cernopendata-client --help
+cernopendata-client --help
 ```
 
 ```output
@@ -62,13 +60,13 @@ Each dataset has a unique identifier, a record id (or `recid`), that shows in th
 For example, in the previous sections, you have seen that file listings are in multiple text files. To get the list of **all** files in the [/SingleMuon/Run2016H-UL2016_MiniAODv2_NanoAODv9-v1/NANOAOD](http://opendata.cern.ch/record/30563) dataset, use the following (`recid` of this dataset is 30563):
 
 ```bash
-docker run -i -t --rm docker.io/cernopendata/cernopendata-client  get-file-locations --recid 30563 --protocol xrootd
+cernopendata-client get-file-locations --recid 30563 --protocol xrootd
 ```
 
 or pipe it to a local file with:
 
 ```bash
-docker run -i -t --rm docker.io/cernopendata/cernopendata-client  get-file-locations --recid 30563 --protocol xrootd > files-recid-30563.txt
+cernopendata-client get-file-locations --recid 30563 --protocol xrootd > files-recid-30563.txt
 ```
 
 :::::: prereq
@@ -76,7 +74,7 @@ docker run -i -t --rm docker.io/cernopendata/cernopendata-client  get-file-locat
 See how to get the metadata fields in JSON format with
 
 ```bash
-docker run -i -t --rm docker.io/cernopendata/cernopendata-client  get-metadata --recid 30563
+cernopendata-client get-metadata --recid 30563
 ```
 
 Note that the JSON format can be displayed in the CERN Open data portal web interface by adding `/export/json` in the dataset URL. Try it! 
