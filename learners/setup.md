@@ -25,7 +25,7 @@ If in the jupyter notebook:
 You will also need XRootD support to stream files directly from the CERN Open Data storage. Install it with:
 
 ```bash
-pip install xrootd
+pip install xrootd fsspec-xrootd
 ```
 
 A Unix terminal (Linux, macOS terminal, or Windows WSL2 Ubuntu terminal) is required for the command-line steps.
